@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/logo.svg";
+import { HashLink } from "react-router-hash-link";
+import { BrowserRouter as Router } from "react-router-dom";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -61,34 +63,43 @@ export const Banner = () => {
   };
 
   return (
-    <section className="banner" id="home">
-      <Container className="banner-content">
-        <Row className="align-items-center">
-          <Col xs={12} md={6} xl={7}>
-            <span className="tagline">Greetings! I'm Facundo Frechero</span>
-            <Container className="typing-animation-container">
-              <h1>
-                <span className="wrap">{text}</span>
-              </h1>
-            </Container>
-            <p>Welcome to my portfolio! 
-              <br/>Born in 1997 in Mar del Plata, Buenos Aires, Argentina.
-              <br/>You can find me coding, eating pizza, creating music, skating, playing videogames or reading.
-              <br/>I love what i do, and that's what makes me good in it.
-              <br/>Always chasing knowledge and learning new things!
-            </p>
-            <button onClick={() => console.log("connect")}>
-              Contact Me <ArrowRightCircle size={25} />
-            </button>
-          </Col>
-          <Col xs={12} md={6} xl={5}>
-            <Container className="banner-img-updown">
-              <img src={headerImg} alt="header img" draggable="false" />
-            </Container>
-          </Col>
-        </Row>
-      </Container>
-    </section>
+    <Router>
+      <section className="banner" id="home">
+        <Container className="banner-content">
+          <Row className="align-items-center">
+            <Col xs={12} md={6} xl={7}>
+              <span className="tagline">Greetings! I'm Facundo Frechero</span>
+              <Container className="typing-animation-container">
+                <h1>
+                  <span className="wrap">{text}</span>
+                </h1>
+              </Container>
+              <p>
+                Welcome to my portfolio!
+                <br />
+                Born in 1997 in Mar del Plata, Buenos Aires, Argentina.
+                <br />
+                You can find me coding, eating pizza, creating music, skating,
+                playing videogames or reading.
+                <br />I love what i do, and that's what makes me good in it.
+                <br />
+                Always chasing knowledge and learning new things!
+              </p>
+              <HashLink to="#connect" style={{ textDecoration: 'none' }}>
+                <button>
+                  Contact Me <ArrowRightCircle size={25} />
+                </button>
+              </HashLink>
+            </Col>
+            <Col xs={12} md={6} xl={5}>
+              <Container className="banner-img-updown">
+                <img src={headerImg} alt="header img" draggable="false" />
+              </Container>
+            </Col>
+          </Row>
+        </Container>
+      </section>  
+    </Router>
   );
 };
 
