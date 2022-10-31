@@ -66,7 +66,7 @@ export const Contact = () => {
           </Col>
           <Col size={12} md={6}>
             <div>
-              <h2>Come say hello!</h2>
+              <h2>Come say hell!</h2>
               <form onSubmit={handleSubmit}>
                 <Row>
                   <Col size={12} sm={6} className="px-1">
