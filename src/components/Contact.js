@@ -1,4 +1,4 @@
-import { useState, useRef} from "react";
+import { useState, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import emailjs from '@emailjs/browser';
 import contactImg from "../assets/img/contact-img.svg";
