@@ -1,7 +1,6 @@
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import projImg1 from "../assets/img/project-img1.png";
 import elepe from "../assets/img/elepe.png";
 
 
@@ -12,15 +11,7 @@ export const Projects = () => {
       description: "Responsive WebApp created with vanilla JavaScript, HTML/CSS",
       imgUrl: elepe,
       path: "/frechero-e-commerce-template.vercel.app/index.html"
-    },
-    {
-      title: "Comming Soon",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Comming Soon",
-      imgUrl: projImg1,
-    },
+    }
   ];
 
   return (
